@@ -35,7 +35,7 @@ mkdir data/kafka
 nano config/server.properties 
 log.dirs=/home/ckk/kafka/kafka_2.11-2.1.1/data/kafka
 
-## Ideally we need to assign replication factor=3 to provide fault tolerant design. -Local Device Setting is for test purpose.
+#### Ideally we need to assign replication factor=3 to provide fault tolerant design. -Local Device Setting is for test purpose.
 kafka/kafka_2.11-2.1.1$ nano config/server.properties 
 offsets.topic.replication.factor=1
 
@@ -66,11 +66,11 @@ kafka-server-start.sh config/server.properties
 start-master.sh
 
 ***** CREATE A KAFKA TOPIC *****
-# Set segment.ms config to 1000 milliseconds to ensure a new segment is created at every second.
-# Data Retention for each partition is limited with 10GB since we can retain 100GB (Upper Boundary: 200GB)
-# Cleaner thread finds the filthiest log and cleans it if the ratio is greater than 0.1
-# retention.bytes defines how much data Kafka will ensure is available
-# retention.ms is 7 days by default, changed as 10 days.
+#### Set segment.ms config to 1000 milliseconds to ensure a new segment is created at every second.
+#### Data Retention for each partition is limited with 10GB since we can retain 100GB (Upper Boundary: 200GB)
+#### Cleaner thread finds the filthiest log and cleans it if the ratio is greater than 0.1
+#### retention.bytes defines how much data Kafka will ensure is available
+#### retention.ms is 7 days by default, changed as 10 days.
 
 
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 10 \
