@@ -35,7 +35,7 @@ mkdir data/kafka
 nano config/server.properties 
 log.dirs=/home/ckk/kafka/kafka_2.11-2.1.1/data/kafka
 
-# Ideally we need to assign replication factor=3 to provide fault tolerant design. -Local Device Setting is for test purpose.
+## Ideally we need to assign replication factor=3 to provide fault tolerant design. -Local Device Setting is for test purpose.
 kafka/kafka_2.11-2.1.1$ nano config/server.properties 
 offsets.topic.replication.factor=1
 
