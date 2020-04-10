@@ -1,13 +1,12 @@
 --- HOW TO USE ---
 
- - SOFTWARE VERSIONS -
-OS        = Ubuntu 19.10 
-JAVA      = 1.8.0_242 
-KAFKA     = 2.1.1 
-SPARK     = 2.4.5 
-INTELLIJ  = 2019.3.4 (Community Edition) 
-MAVEN     = 3.6.1 
-*** SOFTWARE VERSIONS ***
+SOFTWARE VERSIONS
+      OS        = Ubuntu 19.10 
+      JAVA      = 1.8.0_242 
+      KAFKA     = 2.1.1 
+      SPARK     = 2.4.5 
+      INTELLIJ  = 2019.3.4 (Community Edition) 
+      MAVEN     = 3.6.1 
 
 1.Java Installation 
       sudo apt-get update sudo apt install openjdk-8-jdk
@@ -55,18 +54,18 @@ MAVEN     = 3.6.1
 
 9. Create a Kafka Topic
 
-#### Set segment.ms config to 1000 milliseconds to ensure a new segment is created at every second.
-#### Data Retention for each partition is limited with 10GB since we can retain 100GB (Upper Boundary: 200GB)
-#### Cleaner thread finds the filthiest log and cleans it if the ratio is greater than 0.1
-#### retention.bytes defines how much data Kafka will ensure is available
-#### retention.ms is 7 days by default, changed as 10 days.
+      #### Set segment.ms config to 1000 milliseconds to ensure a new segment is created at every second.
+      #### Data Retention for each partition is limited with 10GB since we can retain 100GB (Upper Boundary: 200GB)
+      #### Cleaner thread finds the filthiest log and cleans it if the ratio is greater than 0.1
+      #### retention.bytes defines how much data Kafka will ensure is available
+      #### retention.ms is 7 days by default, changed as 10 days.
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 10
---topic Users --config "cleanup.policy=compact"
---config "segment.ms=1000"
---config "min.cleanable.dirty.ratio=0.01"
---config "retention.bytes=10737418240"
---config "retention.ms=864000000"
+      bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 10
+      --topic Users --config "cleanup.policy=compact"
+      --config "segment.ms=1000"
+      --config "min.cleanable.dirty.ratio=0.01"
+      --config "retention.bytes=10737418240"
+      --config "retention.ms=864000000"
 
 10. Run the StructuredStreaming Object in Scala
 11. Run the Producer Object in Scala
