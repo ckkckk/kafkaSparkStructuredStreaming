@@ -95,7 +95,7 @@ object StructuredStreaming {
       .count()
       .sort(col("count")).limit(10)
 
-    val genderDistribution_sink = mostCommonCountries
+    val genderDistribution_sink = genderDistribution
       .writeStream
       .format("console")
       .outputMode("complete")
