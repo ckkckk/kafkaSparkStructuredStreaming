@@ -1,4 +1,4 @@
-*** SOFTWARE VERSIONS ***
+*** SOFTWARE VERSIONS *** \n
 JAVA      = 1.8.0_242
 KAFKA     = 2.1.1
 SPARK     = 2.4.5
