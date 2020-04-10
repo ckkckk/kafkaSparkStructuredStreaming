@@ -1,6 +1,6 @@
 --- HOW TO USE ---
 
-SOFTWARE VERSIONS
+SOFTWARE VERSIONS ->
       OS        = Ubuntu 19.10 
       JAVA      = 1.8.0_242 
       KAFKA     = 2.1.1 
