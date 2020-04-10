@@ -72,5 +72,5 @@ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -
 11. Run the Producer Object in Scala
 12. Check out StructuredStreaming execution console
 
-![Screenshot](result.jpg)
+![Screenshot](streamingResult.jpg)
 
